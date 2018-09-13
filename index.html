@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片播放</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background: url("images/bg1.jpg");
+            background-size: cover;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            /*background-color: red;*/
+            position: absolute;
+            left:50%;
+            bottom: 200px;
+            margin-left: -100px;
+            transform: rotateX(-15deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            animation: sport 9s linear 0s infinite normal;
+            z-index: 111;
+        }
+        ul li{
+            width: 180px;
+            height: 200px;
+            list-style: none;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            font-size: 40px;
+            background-color: #fff;
+        }
+        ul li img
+        {
+            width: 100%;
+            height: 100%;
+            border: 2px solid deeppink;
+            box-sizing: border-box;
+            transition: all 0.5s;
+        }
+        ul li:nth-child(1){
+            /*background-color: red;*/
+            transform: rotateY(40deg) translateZ(300px);
+        }
+        ul li:nth-child(2){
+            /*background-color: green;*/
+            transform: rotateY(80deg) translateZ(300px);
+        }
+        ul li:nth-child(3){
+            /*background-color: cornflowerblue;*/
+            transform: rotateY(120deg) translateZ(300px);
+        }
+        ul li:nth-child(4){
+            /*background-color: gold;*/
+            transform: rotateY(160deg) translateZ(300px);
+        }
+
+        ul li:nth-child(5) {
+            /*background-color: orange;*/
+            transform: rotateY(200deg) translateZ(300px);
+        }
+
+        ul li:nth-child(6) {
+            /*background-color: skyblue;*/
+            transform: rotateY(240deg) translateZ(300px);
+        }
+
+        ul li:nth-child(7) {
+            /*background-color: gray;*/
+            transform: rotateY(280deg) translateZ(300px);
+        }
+
+        ul li:nth-child(8) {
+            /*background-color: pink;*/
+            transform: rotateY(320deg) translateZ(300px);
+        }
+
+        ul li:nth-child(9) {
+            /*background-color: yellow;*/
+            transform: rotateY(360deg) translateZ(300px);
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+        ul:hover li img{
+            opacity: 0.8;
+        }
+        ul li:hover img{
+            opacity: 1;
+            transform: scale(1.1,1.1);
+        }
+        @keyframes sport{
+            from{
+                transform: rotateX(-15deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(-15deg) rotateY(360deg);
+            }
+        }
+        .heart{
+            width: 173px;
+            height: 157px;
+            position: absolute;
+            left: 100px;
+            bottom: 100px;
+            animation: move 10s linear 0s infinite normal;
+        }
+        @keyframes move {
+            0%{
+                left: 100px;
+                bottom: 100px;
+                opacity: 1;
+            }
+            20%{
+                left: 300px;
+                bottom: 300px;
+                opacity: 0;
+            }
+            40%{
+                left: 500px;
+                bottom: 500px;
+                opacity: 1;
+            }
+            60%{
+                left: 800px;
+                bottom: 300px;
+                opacity: 0;
+            }
+            80%{
+                left: 1200px;
+                bottom: 100px;
+                opacity: 1;
+            }
+            100%{
+                left: 800px;
+                bottom: -200px;
+            }
+        }
+        .heart1 {
+            width: 173px;
+            height: 157px;
+            position: absolute;
+            right: 100px;
+            top: 100px;
+            animation: move1 10s linear 0s infinite normal;
+        }
+        @keyframes move1 {
+            0%{
+                right: 100px;
+                top: 100px;
+                opacity: 1;
+            }
+            20%{
+                right: 300px;
+                top: 300px;
+                opacity: 0;
+            }
+            40%{
+                right: 500px;
+                top: 500px;
+                opacity: 1;
+            }
+            60%{
+                right: 800px;
+                top: 300px;
+                opacity: 0;
+            }
+            80%{
+                right: 1200px;
+                top: 100px;
+                opacity: 1;
+            }
+            100%{
+                right: 800px;
+                top: -200px;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/psb%20(1).jpg" alt=""></li>
+    <li><img src="images/psb%20(2).jpg" alt=""></li>
+    <li><img src="images/psb%20(3).jpg" alt=""></li>
+    <li><img src="images/psb%20(4).jpg" alt=""></li>
+    <li><img src="images/psb%20(5).jpg" alt=""></li>
+    <li><img src="images/psb%20(6).jpg" alt=""></li>
+    <li><img src="images/psb%20(7).jpg" alt=""></li>
+    <li><img src="images/psb(8).jpg" alt=""></li>
+    <li><img src="images/psb(9).jpg" alt=""></li>
+</ul>
+<img class="heart" src="images/xin.png">
+<img class="heart1" src="images/xin.png">
+</body>
+</html>
